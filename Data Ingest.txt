@@ -9,7 +9,7 @@ sqoop import --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
 
 **using target dir
 
-hadoop fs -ls /user/cloudera/customers
+hadoop fs -mkdir /user/cloudera/customers
 
 sqoop import --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
 --username retail_dba \
@@ -17,3 +17,5 @@ sqoop import --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
 --table customers \
 --target-dir /user/cloudera/customers \
 -m 1
+
+Note : target-dir will create a new directory and it will fail if the directory is already exists.
