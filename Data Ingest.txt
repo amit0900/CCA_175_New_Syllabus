@@ -1,8 +1,8 @@
 1. Import data from a MySQL database into HDFS using Sqoop
 
-sqoop import --connect “jdbc:mysql://quickstart.cloudera:3306/retail_db” \
+sqoop import --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
 --username retail_dba \
 --password cloudera \
 --table orders \
---warehouse-dir /user/cloudera/sqoop_import \
+--target-dir /user/cloudera/sqoop_import \
 -m 1
